@@ -1,0 +1,29 @@
+pipeline {
+    agent any
+    stages {
+        stage ('build') {
+            steps {
+                git 'https://github.com/VigneshThanthony/Test-Jenkins-Repo.git'
+                bat 'mvn -B compile'
+            }     
+        }
+        stage('test')  {
+            steps {
+                bat 'mvn test'
+            }
+        }
+        post{
+            always{
+                junit 'target/Documents/*.xml'
+            }
+        }    
+        stage('package') {
+            steps{
+                bat 'mvn package'
+
+                archiveArtifacts 'target/*.jar'
+
+            }
+        }   
+    }
+}
