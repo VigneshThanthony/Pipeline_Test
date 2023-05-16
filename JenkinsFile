@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage ('build') {
             steps {
-                git 'https://github.com/VigneshThanthony/Test-Jenkins-Repo.git'
+                git 'https://github.com/VigneshThanthony/Pipeline_Test.git'
                 bat 'mvn -B compile'
             }     
         }
