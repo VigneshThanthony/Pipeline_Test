@@ -15,7 +15,7 @@ pipeline {
         {
             steps
             {
-                test 'third-job'
+                build 'third-job'
             }
         }
         
