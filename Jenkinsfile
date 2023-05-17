@@ -8,6 +8,7 @@ pipeline {
             steps
             {
                 echo 'Build App'
+                build 'first_job'
             }
         }
         
