@@ -7,8 +7,7 @@ pipeline {
         {
             steps
             {
-                echo 'Build App'
-                build 'first_job'
+                build 'second-job'
             }
         }
         
@@ -16,7 +15,7 @@ pipeline {
         {
             steps
             {
-                echo 'Test App'
+                test 'third-job'
             }
         }
         
