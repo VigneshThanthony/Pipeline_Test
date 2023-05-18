@@ -1,5 +1,5 @@
-pipeline { 
-    agent any 
+pipeline {
+    agent any
 
     stages
     {
@@ -7,8 +7,7 @@ pipeline {
         {
             steps
             {
-                echo 'second-job'
-                
+                echo 'Build App'
             }
         }
         
@@ -16,7 +15,7 @@ pipeline {
         {
             steps
             {
-                echo 'third-job'
+                echo 'Test App'
             }
         }
         
@@ -28,4 +27,11 @@ pipeline {
             }
         }
     }
+    post
+     {
+        always
+        {
+            emailext body: 'Testing purpose.', subject: 'Pipeline Mail Notification', to: 'vvignesh139@gmail.com'
+        }
+     }
 }
