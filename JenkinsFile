@@ -12,17 +12,7 @@ pipeline
             } 
                         
         }
-        {
-            steps
-            {
-                echo 'Build 2 App'
-            } 
-                        
-        }
-        
-                        
-        }
-        
+                                      
         stage ('Test')
         {
             steps
@@ -46,5 +36,6 @@ pipeline
             emailext body: 'Testing purpose.', subject: 'Pipeline Mail Notification', to: 'vvignesh139@gmail.com'
         }
     }
+ }
   
 
