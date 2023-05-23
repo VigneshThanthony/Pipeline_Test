@@ -9,11 +9,17 @@ pipeline {
             {
                 echo 'Build App'
             } 
+                        
+        }
+        {
             steps
             {
-               echo 'Build2 app'
-            }
-            
+                echo 'Build 2 App'
+            } 
+                        
+        }
+        
+                        
         }
         
         stage ('Test')
