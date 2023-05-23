@@ -1,4 +1,5 @@
-pipeline {
+pipeline 
+{
     agent any
 
     stages
@@ -44,5 +45,6 @@ pipeline {
         {
             emailext body: 'Testing purpose.', subject: 'Pipeline Mail Notification', to: 'vvignesh139@gmail.com'
         }
-     }
-}
+    }
+  
+
