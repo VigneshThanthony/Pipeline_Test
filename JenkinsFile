@@ -33,7 +33,7 @@ pipeline
      {
         always
         {
-            emailext body: 'Testing purpose.', subject: 'Pipeline Mail Notification', to: 'vvignesh139@gmail.com'
+            for testing
         }
     }
  }
