@@ -33,7 +33,7 @@ pipeline
      {
         always
         {
-            for testing
+            (for testing)
         }
     }
  }
