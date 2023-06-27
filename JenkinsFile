@@ -12,6 +12,15 @@ pipeline
             } 
                         
         }
+
+        stage ('Build1')
+        {
+            steps
+            {
+                echo 'Build1 App'
+            } 
+                        
+        }
                                       
         stage ('Test')
         {
